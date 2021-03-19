@@ -1,0 +1,1 @@
+EXTERNAL-IP = "aa0e270f9c3304778881ff0751fce65e-1690733037.us-east-2.elb.amazonaws.com"
