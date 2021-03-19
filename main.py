@@ -84,8 +84,15 @@ def auth():
 
     user_data = body
 
-    return jsonify(token=_get_jwt(user_data).decode("utf-8"))
-    # return jsonify(token=_get_jwt(user_data))
+    """ The "decode('utf-8)" portion of the following line throws an error
+        running against this poject's specific set of Python and dependencies
+        versions:
+        
+        return jsonify(token=_get_jwt(user_data).decode("utf-8"))
+
+        Instead, I removed it to satisfy what is needed:
+    """
+    return jsonify(token=_get_jwt(user_data))
 
 
 @APP.route("/contents", methods=["GET"])
